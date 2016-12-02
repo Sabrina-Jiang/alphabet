@@ -1,0 +1,255 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-position:center;
+    background: -webkit-image-set(url(/img/bg.png) 1x, url(/img/bg@2x.png) 2x);
+    background-size: 7%;
+    overflow-x: hidden;
+    padding-top: 45px;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    color: #ea9595;
+    text-decoration: none;
+    border-bottom: 1px solid #ea9595;
+}
+
+a:visited {
+    color: #ea9595;
+    text-decoration: none;
+    border-bottom: 1px solid #ea9595;
+}
+
+body::before {
+    width: 100%;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 10;
+    content: "";
+}
+
+.container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container::before {
+    background-image: url(/img/kitty.png);
+    width: 120px;
+    height: 105px;
+    position: absolute;
+    background-size: 120px;
+    content: "";
+    right: 0px;
+    top: 30px;
+}
+
+.wl-card {
+    width: 90%;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 30px auto;
+    background: #fcfcfc;
+    padding: 10px 0 20px 0;
+    /*transition: all 300ms linear;*/
+    overflow: hidden;
+}
+
+@media screen and (min-width: 400px) {
+    .wl-card-responsive {
+        width: 30%;
+        float: left;
+        margin: 30px calc(10% / 7);
+    }
+    .wl-card-responsive:nth-child(3n) {
+        clear: both;
+    }
+}
+
+.wl-card > h2 {
+    text-align: center;
+    color: #b96363;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.wl-card > input {
+    display: none;
+    margin-left: 40px;
+    width: calc(100% - 100px);
+    border: 1px solid #ea9595;
+    border-radius: 5px;
+    font-size: 1em;
+    height: 2em;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: all 300ms linear;
+    color: #555;
+    text-align: center;
+}
+
+.wl-card > input:focus {
+    box-shadow: 0 0 10px rgba(234, 149, 149, 0.5);
+    -webkit-box-shadow: 0 0 10px rgba(234, 149, 149, 0.5);
+}
+
+.today-board {
+    text-align: center;
+    overflow: hidden;
+}
+
+.today-board::before {
+    width: 100%;
+    display: block;
+    color: #b96363;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 1.2em;
+    content: "Today's words";
+}
+
+.dash-spliter {
+    width: 100%;
+    float: left;
+    margin: 50px auto;
+}
+
+.dash-spliter > .dasher {
+    border-bottom: 1px dashed #ea9595;
+    height: 1px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.slipter::before {
+    border-top: 1px dashed #ea9595;
+    display: block;
+    width: 80%;
+    margin: 50px auto;
+    content: ""
+}
+
+.wordlists {
+    display: block;
+    list-style: none;
+    /*transition: all 100ms linear;*/
+    overflow: hidden;
+    padding-left: 0;
+}
+
+@media screen and (min-width: 400px) {
+    .wordlists {
+        width: 33%;
+        float: left;
+    }
+
+}
+
+.wordlists > li {
+    font-size: 1.2em;
+    font-family: helvetica, arial, sans-serif;
+    color: #ea9595;
+    float: left;
+}
+
+.wordlists > li:nth-child(odd)
+{
+    display: inline;
+    float: left;
+    border-bottom: 1px solid #ea9595;
+    line-height: 33px;
+    margin-left: 10%;
+}
+
+.wordlists > li:nth-child(even)
+{
+    float: right;
+    margin-right: 7%;
+}
+
+.loglists {
+    margin: 0;
+}
+
+.less-margin {
+    margin-bottom: 10px !important;
+}
+
+.loglists > li {
+    float: none !important;
+    border-bottom: none !important;
+    margin-left: 15% !important;
+    color: #e8adad;
+}
+
+.loglists > li:nth-child(1) {
+    border-bottom: 1px solid #ea9595 !important;
+    margin-left: 10% !important;
+    color: #ea9595;
+    line-height: 3em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #ea9595;
+    border: 1px solid #ea9595;
+    font-family: sans-serif;
+    font-weight: 100;
+    width: 5em;
+    margin: 0 auto;
+    font-size: 0.8em;
+}
+
+.ans-card {
+    width: 90%;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 30px auto;
+    background: #fcfcfc;
+    padding: 10px 0 20px 0;
+    transition: all 300ms linear;
+    overflow: hidden;
+}
+
+.ans-list {
+    list-style: none;
+}
+
+.ans-word {
+    margin-bottom: 1em !important;
+}
+
+.ans-list > li {
+    font-family: sans-serif;
+    color: #555;
+}
+
+.ans-list > .ans-mine {
+    margin-top: 10px;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.ans-list > .ans-mine > p {
+    display: inline;
+    color: #ea9595;
+
+}
+
+.btn-wrapper {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
